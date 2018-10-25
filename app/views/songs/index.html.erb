@@ -1,6 +1,11 @@
+
 <h1>All Songs</h1>
 
 <% @songs.each do |song| %>
- <%=song.title %>
- <li>Plays: <%= song.play_count %></li>
+  <ul>
+    <li><%=song.title %></li>
+    <li>Length: <%= song.length %> seg</li>
+    <li>Plays: <%= song.play_count %></li>
+    <li> <%= button_to "Add Song to Cart", carts_path(song_id: song.id), id: "to_the_cart-#{song.id}", class: "btn btn-danger" %> </li>
+  </ul>
 <% end %>
