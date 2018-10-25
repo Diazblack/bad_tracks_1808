@@ -29,7 +29,7 @@ describe 'Cart' do
 
       subject do
         click_on "to_the_cart-#{@song_1.id}"
-        click_on "to_the_cart-#{@song_1.id}"
+        # click_on "to_the_cart-#{@song_1.id}"
         page
       end
 
